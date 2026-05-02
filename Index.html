@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estela Intuitiva | Oráculos & Terapias Energéticas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown-deep:   #2A0E04;
+    --brown-dark:   #3D1A0A;
+    --brown-mid:    #6B3018;
+    --brown-warm:   #8B4A28;
+    --orange:       #D25D0A;
+    --orange-light: #E8803A;
+    --orange-pale:  #F2A96A;
+    --peach:        #FFCFAD;
+    --peach-light:  #FFE8D6;
+    --wine:         #7B0A41;
+    --wine-light:   #B41764;
+    --cream:        #FDF5EE;
+    --text-dark:    #2A0E04;
+    --text-mid:     #6B3018;
+    --text-soft:    #A0622A;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: linear-gradient(160deg, #3D1A0A 0%, #5C2510 35%, #3A1208 70%, #2A0E04 100%);
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+  .page { max-width:700px; margin:0 auto; padding:60px 28px 80px; }
+
+/* HEADER */
+.header { text-align:center; padding-bottom:56px; margin-bottom:56px; }
+.logo-mark { margin:0 auto 20px; width:64px; height:64px; display:block; }
+.header-brand {
+font-family:‘DM Serif Display’,serif;
+font-size:46px; font-weight:400;
+color:var(–peach); letter-spacing:1px; line-height:1; margin-bottom:6px;
+}
+.header-brand span { color:var(–orange-light); font-style:italic; }
+.header-tagline {
+font-size:10.5px; letter-spacing:3.5px; text-transform:uppercase;
+color:var(–orange-pale); margin-bottom:20px; font-weight:400;
+}
+.header-divider { display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0; }
+.header-divider span { height:1px; width:80px; background:linear-gradient(to right,transparent,var(–orange)); }
+.header-divider span.r { background:linear-gradient(to left,transparent,var(–orange)); }
+.header-divider i { color:var(–orange); font-style:normal; font-size:12px; }
+.header-desc { font-size:14px; color:var(–peach); opacity:.78; line-height:1.9; max-width:420px; margin:0 auto 20px; font-weight:300; }
+.badge-online {
+display:inline-block; font-size:9.5px; letter-spacing:3px; text-transform:uppercase;
+color:var(–orange-light); border:1px solid rgba(210,93,10,.4); padding:6px 18px;
+background:rgba(210,93,10,.08);
+}
+
+/* CARD */
+.card { margin-bottom:48px; animation:fadeUp .6s ease both; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+.card:nth-child(2){animation-delay:.05s} .card:nth-child(3){animation-delay:.1s}
+.card:nth-child(4){animation-delay:.15s} .card:nth-child(5){animation-delay:.2s}
+.card:nth-child(6){animation-delay:.25s} .card:nth-child(7){animation-delay:.3s}
+
+.card-inner {
+background:linear-gradient(145deg,var(–cream) 0%,#FFF8F2 100%);
+border:1px solid rgba(210,93,10,.22);
+padding:40px 36px 34px;
+position:relative; overflow:hidden;
+}
+.card-inner::before {
+content:’’; position:absolute; top:0; left:0;
+width:4px; height:100%;
+background:linear-gradient(to bottom,var(–orange),var(–wine));
+}
+.card-inner::after {
+content:’’; position:absolute; top:-40px; right:-40px;
+width:140px; height:140px; border-radius:50%;
+background:radial-gradient(circle,rgba(210,93,10,.05) 0%,transparent 70%);
+pointer-events:none;
+}
+
+.card-number { font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(–orange); margin-bottom:5px; font-weight:700; }
+.card-title { font-family:‘DM Serif Display’,serif; font-size:30px; font-weight:400; color:var(–brown-dark); line-height:1.15; margin-bottom:4px; }
+.card-subtitle { font-family:‘DM Serif Display’,serif; font-size:15px; font-style:italic; color:var(–brown-mid); margin-bottom:18px; }
+.card-rule { width:44px; height:1px; background:linear-gradient(to right,var(–orange),var(–orange-pale)); margin-bottom:18px; }
+
+.format-badge {
+display:inline-flex; align-items:center; gap:6px;
+font-size:10px; letter-spacing:1.5px; text-transform:uppercase;
+color:var(–brown-mid); background:rgba(210,93,10,.09);
+border:1px solid rgba(210,93,10,.2); padding:5px 12px;
+margin-bottom:22px; font-weight:700;
+}
+.format-badge .dot { width:6px; height:6px; border-radius:50%; background:var(–orange); display:inline-block; }
+
+.card-description { font-size:14px; color:#4A2010; line-height:1.9; margin-bottom:26px; font-weight:400; }
+
+.how { background:rgba(210,93,10,.06); border-left:3px solid rgba(210,93,10,.3); padding:16px 18px; margin-bottom:26px; }
+.how-title { font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(–orange); margin-bottom:12px; font-weight:700; }
+.how-step { font-size:13.5px; color:#4A2010; line-height:1.85; padding-left:18px; position:relative; margin-bottom:5px; font-weight:400; }
+.how-step::before { content:’—’; position:absolute; left:0; color:var(–orange-pale); font-size:10px; top:4px; }
+.how-step strong { font-weight:700; color:var(–brown-dark); }
+
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:26px; }
+.col-title { font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(–orange); margin-bottom:11px; font-weight:700; }
+.col-item { font-size:13.5px; color:var(–brown-mid); line-height:1.85; padding-left:14px; position:relative; margin-bottom:1px; }
+.col-item::before { content:’·’; position:absolute; left:0; color:var(–orange); font-size:16px; line-height:1.45; }
+
+.pdf-box { background:linear-gradient(135deg,rgba(123,10,65,.06),rgba(210,93,10,.06)); border:1px solid rgba(123,10,65,.18); padding:16px 18px; margin-bottom:26px; }
+.pdf-box .how-title { color:var(–wine); }
+.pdf-box .how-step::before { color:rgba(123,10,65,.35); }
+
+.price-block { display:flex; align-items:flex-end; justify-content:space-between; padding-top:22px; border-top:1px solid rgba(210,93,10,.18); flex-wrap:wrap; gap:12px; }
+.price-label { font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(–text-soft); margin-bottom:3px; font-weight:600; }
+.price-value { font-family:‘DM Serif Display’,serif; font-size:36px; font-weight:400; color:var(–brown-dark); }
+.price-free  { font-family:‘DM Serif Display’,serif; font-size:36px; font-weight:400; color:var(–wine); }
+.price-tag { font-size:9.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(–brown-dark); background:linear-gradient(135deg,var(–peach),var(–orange-pale)); padding:7px 15px; align-self:center; font-weight:600; }
+
+.gratuito-badge {
+display:inline-block; background:linear-gradient(135deg,var(–wine),var(–wine-light));
+color:white; font-size:9px; letter-spacing:2.5px; text-transform:uppercase;
+padding:4px 11px; margin-left:8px; vertical-align:middle; position:relative; top:-3px; font-weight:700;
+}
+
+.sep { display:flex; align-items:center; gap:14px; margin:0 0 48px; opacity:.3; }
+.sep-line { flex:1; height:1px; background:var(–orange-pale); }
+.sep-star { color:var(–orange-pale); font-size:11px; }
+
+.section-label { text-align:center; margin-bottom:32px; }
+.section-label span { font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(–peach); opacity:.5; border-bottom:1px solid rgba(255,207,173,.2); padding-bottom:8px; }
+
+/* FOOTER */
+.footer-card { text-align:center; padding:52px 36px; background:linear-gradient(145deg,var(–peach-light),var(–peach)); border:1px solid rgba(210,93,10,.28); position:relative; overflow:hidden; }
+.footer-card::before { content:’’; position:absolute; top:-50px; left:-50px; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle,rgba(123,10,65,.07) 0%,transparent 70%); }
+.footer-eyebrow { font-size:9.5px; letter-spacing:4px; text-transform:uppercase; color:var(–wine); margin-bottom:14px; font-weight:700; }
+.footer-title { font-family:‘DM Serif Display’,serif; font-size:32px; color:var(–brown-dark); margin-bottom:14px; }
+.footer-desc { font-size:13.5px; color:var(–brown-mid); line-height:1.9; max-width:360px; margin:0 auto 30px; }
+.footer-channels { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+.btn { font-size:10px; letter-spacing:2.5px; text-transform:uppercase; padding:13px 28px; text-decoration:none; cursor:pointer; border:none; font-weight:700; font-family:‘Nunito’,sans-serif; }
+.btn-solid { background:var(–wine); color:var(–peach); }
+.btn-outline { background:transparent; color:var(–brown-dark); border:1.5px solid rgba(61,26,10,.35); }
+.footer-note { font-size:11px; color:var(–brown-warm); letter-spacing:.5px; opacity:.7; }
+
+@media(max-width:480px){
+.page{padding:36px 16px 60px}
+.card-inner{padding:26px 20px 24px}
+.cols{grid-template-columns:1fr}
+.header-brand{font-size:36px}
+.card-title{font-size:26px}
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <svg class="logo-mark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 4 L44 32 L40 40 L36 32 Z" fill="#FFCFAD" opacity=".9"/>
+      <path d="M40 76 L44 48 L40 40 L36 48 Z" fill="#FFCFAD" opacity=".9"/>
+      <path d="M4 40 L32 36 L40 40 L32 44 Z" fill="#FFCFAD" opacity=".9"/>
+      <path d="M76 40 L48 36 L40 40 L48 44 Z" fill="#FFCFAD" opacity=".9"/>
+      <path d="M11.7 11.7 L33 33 L40 40 L28 22 Z" fill="#F2A96A" opacity=".85"/>
+      <path d="M68.3 68.3 L47 47 L40 40 L52 58 Z" fill="#F2A96A" opacity=".85"/>
+      <path d="M68.3 11.7 L47 33 L40 40 L58 28 Z" fill="#F2A96A" opacity=".85"/>
+      <path d="M11.7 68.3 L33 47 L40 40 L22 52 Z" fill="#F2A96A" opacity=".85"/>
+      <circle cx="40" cy="40" r="5" fill="#D25D0A" opacity=".7"/>
+      <circle cx="40" cy="40" r="2.5" fill="#FFCFAD"/>
+    </svg>
+    <h1 class="header-brand">Estela <span>Intuitiva</span></h1>
+    <p class="header-tagline">Oráculos & Terapias Energéticas</p>
+    <div class="header-divider"><span></span><i>✦</i><span class="r"></span></div>
+    <p class="header-desc">Para quem busca mais do que respostas: Transformação.<br>Um espaço de escuta, clareza e cuidado energético — onde cada atendimento é pensado para que você saia com mais leveza, direção e consciência sobre o que está vivendo.</p>
+    <div class="badge-online">Atendimento Online</div>
+  </header>
+
+  <!-- CARD 00 -->
+
+  <div class="section-label"><span>Por onde começar</span></div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-number">00 · Conversa Inicial <span class="gratuito-badge">Gratuito</span></div>
+      <h2 class="card-title">Diagnóstico Inicial</h2>
+      <p class="card-subtitle">Uma conversa para encontrar seu caminho</p>
+      <div class="card-rule"></div>
+      <div class="format-badge"><span class="dot"></span> Via WhatsApp</div>
+      <p class="card-description">Não sabe por onde começar? Me manda uma mensagem. Você preenche um breve formulário, me conta o que está vivendo e eu indico qual atendimento faz mais sentido para o seu momento.</p>
+      <div class="price-block">
+        <div><div class="price-label">Investimento</div><div class="price-free">Gratuito</div></div>
+        <div class="price-tag">Disponível via WhatsApp</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-line"></span><span class="sep-star">✦</span><span class="sep-line"></span></div>
+  <div class="section-label"><span>Atendimentos</span></div>
+
+  <!-- CARD 01 -->
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-number">01 · Sessão Única</div>
+      <h2 class="card-title">Leitura de Clareza</h2>
+      <p class="card-subtitle">Leitura terapêutica com oráculos</p>
+      <div class="card-rule"></div>
+      <div class="format-badge"><span class="dot"></span> Online · Via WhatsApp</div>
+      <p class="card-description">Para quando você sente que precisa enxergar uma situação com mais nitidez — mas ainda não sabe exatamente por onde começar. Uma leitura personalizada e aprofundada sobre um tema que está ocupando seu pensamento, feita com presença, intenção e cuidado.</p>
+      <div class="how">
+        <div class="how-title">Como funciona</div>
+        <div class="how-step">Você traz o tema que deseja trabalhar</div>
+        <div class="how-step">Realizamos uma leitura aprofundada com oráculos</div>
+        <div class="how-step">Você recebe a análise da situação atual e um direcionamento prático</div>
+        <div class="how-step">Encerramos com uma limpeza energética para apoiar seu processo</div>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="col-title">Temas possíveis</div>
+          <div class="col-item">Relacionamentos</div>
+          <div class="col-item">Vida profissional</div>
+          <div class="col-item">Decisões e caminhos</div>
+          <div class="col-item">Bloqueios emocionais</div>
+          <div class="col-item">Autoconhecimento</div>
+        </div>
+        <div>
+          <div class="col-title">Você recebe</div>
+          <div class="col-item">Leitura personalizada e aprofundada</div>
+          <div class="col-item">Análise da situação atual</div>
+          <div class="col-item">Direcionamento prático</div>
+          <div class="col-item">Orientação final</div>
+          <div class="col-item">Limpeza energética de apoio</div>
+        </div>
+      </div>
+      <div class="price-block">
+        <div><div class="price-label">Investimento</div><div class="price-value">R$ 120</div></div>
+        <div class="price-tag">Acompanhamento intuitivo individualizado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-line"></span><span class="sep-star">✦</span><span class="sep-line"></span></div>
+
+  <!-- CARD 02 -->
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-number">02 · Sessão Única</div>
+      <h2 class="card-title">Equilíbrio Energético</h2>
+      <p class="card-subtitle">Tratamento com Mesa Radiônica + Oráculo</p>
+      <div class="card-rule"></div>
+      <div class="format-badge"><span class="dot"></span> Online · Videochamada via Google Meet</div>
+      <p class="card-description">Para quando você não consegue nomear exatamente o que está sentindo — mas sabe que algo está pesado, travado ou fora do lugar. Este atendimento cuida do que está por baixo: os campos físico, emocional, mental e espiritual são trabalhados em profundidade, trazendo leveza e realinhamento.</p>
+      <div class="how">
+        <div class="how-title">Como funciona</div>
+        <div class="how-step">Análise energética inicial para identificar os bloqueios prioritários</div>
+        <div class="how-step">Tratamento com Mesa Radiônica: limpeza e harmonização dos seus campos energéticos</div>
+        <div class="how-step">Leitura de oráculo ao final — uma afirmação para integrar e ancorar tudo o que foi trabalhado</div>
+        <div class="how-step">Direcionamento pós-atendimento para dar continuidade ao processo em casa</div>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="col-title">Ideal para quem sente</div>
+          <div class="col-item">Cansaço energético</div>
+          <div class="col-item">Ansiedade e peso emocional</div>
+          <div class="col-item">Repetição de padrões</div>
+          <div class="col-item">Sensação de bloqueio ou estagnação</div>
+        </div>
+        <div>
+          <div class="col-title">Você recebe</div>
+          <div class="col-item">Análise energética inicial</div>
+          <div class="col-item">Identificação dos bloqueios</div>
+          <div class="col-item">Tratamento com Mesa Radiônica</div>
+          <div class="col-item">Limpeza e harmonização energética</div>
+          <div class="col-item">Afirmação de oráculo integradora</div>
+          <div class="col-item">Direcionamento pós-atendimento</div>
+        </div>
+      </div>
+      <div class="price-block">
+        <div><div class="price-label">Investimento</div><div class="price-value">R$ 180</div></div>
+        <div class="price-tag">Cuidado energético personalizado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-line"></span><span class="sep-star">✦</span><span class="sep-line"></span></div>
+
+  <!-- CARD 03 -->
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-number">03 · Acompanhamento Breve — 2 sessões</div>
+      <h2 class="card-title">Jornada de Clareza</h2>
+      <p class="card-subtitle">Leitura, Realinhamento & Reprogramação de Crenças</p>
+      <div class="card-rule"></div>
+      <div class="format-badge"><span class="dot"></span> Online · Ao menos 1 sessão por videochamada via Google Meet</div>
+      <p class="card-description">Para quem está diante de um momento de transição, conflito ou confusão e precisa de mais do que uma resposta — precisa de um processo. Vamos aprofundar a questão que está te travando, identificar as crenças que estão por trás e criar um caminho real de transformação. Você não fica sozinha entre uma sessão e outra.</p>
+      <div class="how">
+        <div class="how-title">Como funciona</div>
+        <div class="how-step"><strong>1ª Sessão (videochamada):</strong> Leitura intuitiva aprofundada com oráculos para mapear o campo e revelar o que está por trás da situação. Trabalho de leitura e reprogramação de crenças limitantes ligadas ao tema</div>
+        <div class="how-step"><strong>Entre as sessões:</strong> Suporte e acolhimento via WhatsApp para apoiar o que emergir</div>
+        <div class="how-step"><strong>2ª Sessão:</strong> Acompanhamento, realinhamento energético, integração do processo e uma mensagem dos seus guias para o seu momento atual</div>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="col-title">Ideal para</div>
+          <div class="col-item">Conflitos afetivos</div>
+          <div class="col-item">Términos e recomeços</div>
+          <div class="col-item">Transição profissional</div>
+          <div class="col-item">Decisões importantes</div>
+          <div class="col-item">Confusão emocional</div>
+        </div>
+        <div>
+          <div class="col-title">Você recebe</div>
+          <div class="col-item">2 sessões individuais</div>
+          <div class="col-item">Leitura intuitiva aprofundada</div>
+          <div class="col-item">Reprogramação de crenças</div>
+          <div class="col-item">Realinhamento e limpeza energética</div>
+          <div class="col-item">Mensagem dos seus guias</div>
+          <div class="col-item">Suporte entre sessões</div>
+        </div>
+      </div>
+      <div class="price-block">
+        <div><div class="price-label">Investimento</div><div class="price-value">R$ 280</div></div>
+        <div class="price-tag">Processo focado e acolhido</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-line"></span><span class="sep-star">✦</span><span class="sep-line"></span></div>
+
+  <!-- CARD 04 -->
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-number">04 · Acompanhamento Aprofundado — 3 sessões</div>
+      <h2 class="card-title">Processo de Transformação</h2>
+      <p class="card-subtitle">Todas as técnicas integradas · Experiência terapêutica completa</p>
+      <div class="card-rule"></div>
+      <div class="format-badge"><span class="dot"></span> Online · Sessões por videochamada via Google Meet</div>
+      <p class="card-description">Para quem está pronta para ir além da clareza e realmente transformar padrões que se repetem há tempo. Este é o atendimento mais completo — três sessões estruturadas, cada uma com um propósito claro, onde todas as ferramentas são integradas em um processo profundo e personalizado. Nada fica solto.</p>
+      <div class="how">
+        <div class="how-title">Como funciona</div>
+        <div class="how-step"><strong>1ª Sessão — Mapeamento (videochamada):</strong> Leitura intuitiva aprofundada com oráculos para revelar e ancorar tudo o que precisa ser transformado. Olhamos juntas para as 4 principais áreas da sua vida — pessoal, relacionamentos, trabalho e financeiro — e identificamos as crenças que sustentam cada bloqueio</div>
+        <div class="how-step"><strong>2ª Sessão — Tratamento (videochamada):</strong> Equilíbrio energético e reorganização completa do campo com Mesa Radiônica. Limpeza profunda e harmonização dos campos físico, emocional, mental e espiritual</div>
+        <div class="how-step"><strong>3ª Sessão — Integração (videochamada):</strong> Fechamento do processo com acompanhamento terapêutico para integrar tudo o que emergiu nas sessões anteriores, e uma mensagem dos seus guias para ancorar a transformação e iluminar o próximo ciclo</div>
+        <div class="how-step">Entrega do PDF exclusivo de autoconhecimento ao final do processo</div>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="col-title">Áreas trabalhadas</div>
+          <div class="col-item">Vida pessoal</div>
+          <div class="col-item">Relacionamentos</div>
+          <div class="col-item">Trabalho</div>
+          <div class="col-item">Vida financeira</div>
+          <div class="col-item">Padrões e bloqueios profundos</div>
+        </div>
+        <div>
+          <div class="col-title">Você recebe</div>
+          <div class="col-item">3 sessões individuais completas</div>
+          <div class="col-item">Leitura intuitiva com oráculos</div>
+          <div class="col-item">Reprogramação de crenças</div>
+          <div class="col-item">Tratamento com Mesa Radiônica</div>
+          <div class="col-item">Mensagem dos seus guias</div>
+          <div class="col-item">Recursos personalizados</div>
+          <div class="col-item">PDF exclusivo de autoconhecimento</div>
+        </div>
+      </div>
+      <div class="pdf-box">
+        <div class="how-title">✦ PDF Exclusivo de Autoconhecimento</div>
+        <div class="how-step">Um material elaborado especialmente para você, integrando Tarot, Numerologia e Astrologia. Ele sintetiza aspectos essenciais da sua personalidade e do momento que está vivendo — um guia para continuar o processo de transformação muito além das sessões.</div>
+      </div>
+      <div class="price-block">
+        <div><div class="price-label">Investimento</div><div class="price-value">R$ 450</div></div>
+        <div class="price-tag">Experiência completa e transformadora</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-line"></span><span class="sep-star">✦</span><span class="sep-line"></span></div>
+
+  <!-- FOOTER -->
+
+  <div class="card">
+    <div class="footer-card">
+      <div class="footer-eyebrow">Agendamentos</div>
+      <h2 class="footer-title">Pronta para começar?</h2>
+      <p class="footer-desc">Não sabe por qual atendimento começar? Me chame para uma conversa inicial gratuita. Vamos entender juntas o que você está vivendo e qual caminho faz mais sentido para o seu momento.</p>
+      <div class="footer-channels">
+        <a href="https://wa.me/5521972602472" target="_blank" class="btn btn-solid">WhatsApp</a>
+        <a href="https://www.instagram.com/estelaintuitiva?igsh=MXVxd2ZiNHc2NTVyeA%3D%3D&utm_source=qr" target="_blank" class="btn btn-outline">Instagram</a>
+      </div>
+      <div class="footer-note">Atendimento Online · Todos os atendimentos são individuais e personalizados</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
